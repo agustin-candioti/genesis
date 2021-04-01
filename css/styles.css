@@ -4,6 +4,10 @@ body{
 }
 a{
   color: #f6f5f5;
+  text-decoration: none !important;
+}
+a:hover{
+  color: #d3e0ea;
 }
 header{
   margin-bottom: 12%;
@@ -20,7 +24,8 @@ img#logoHome{
 }
 header nav ul{
   width: 100%;
-  margin-top: 5.5%;
+  margin-top: 7%;
+  margin-left: -14%;
 }
 header nav ul li{
   margin-right: 3%;
@@ -54,7 +59,7 @@ p#phrase{
     color: #1687a7;
     font-size: 300%;
     opacity: 1;
-    animation: slideUp 1s ease-out;
+    animation: slideUp 2s ease-out;
 }
 hr{
     opacity: 0;
@@ -62,16 +67,16 @@ hr{
 h2::after,h2::before{
   content: '';
   position: absolute;
-  width: 150px;
+  width: 120px;
   height: 4px;
-  background-color: black;
+  background-color: #1687a7;
   top: 28%;
 }
 h2::before{
-  left: 6%;
+  left: 3%;
 }
 h2::after{
-  right: 50%;
+  right: 47%;
   }
 h2.titles{
   text-align: center;
@@ -80,11 +85,11 @@ h2.titles{
   margin-bottom: 5%;
   margin-left: -45%;
 }
+h2.titles[data-scroll="in"]{
+  animation: fadeIn ease 5s;
+}
 div#courses{
   margin-left: 20%;
-}
-section[data-scroll="in"]{
-  animation: fadeIn ease 3s;
 }
 section.courses{
   background-color: #d3e0ea;
@@ -92,6 +97,7 @@ section.courses{
 div#courseImages{
   margin-bottom: 5%;
   margin-left: -10%;
+  height: 200px;
 }
 img.courseImages{
   height: 90%;
@@ -101,17 +107,19 @@ img.courseImages{
   margin-left: auto;
   margin-right: auto;
 }
-div.courseDescription{
-  position: relative;
-  top: 2%;
-  left: 20%;
-  width: 60%;
+img.courseImages[data-scroll="in"]{
+  animation: fadeIn ease 5s;
 }
 p.hiddenText{
   display: none;
+  position: absolute;
+  text-align: center;
+  margin-left: 12%;
+  width: 70%;
 }
 .courseImages:hover + p.hiddenText {
   display: block;
+  animation: fadeIn ease 2s;
 }
 
 
