@@ -1,21 +1,33 @@
 body{
   z-index: 0;
-  background-color: #F7FFF6;
+  background-color: #f6f5f5;
 }
 a{
-  color: white;
+  color: #f6f5f5;
+}
+header{
+  margin-bottom: 12%;
 }
 header nav{
-  background-color: orangered;
+  background-color: #1687a7;
+  height: 100px;
+}
+img#logoHome{
+  width: 10%;
+  margin-top: 3%;
+  margin-left: 10%;
+  border-radius: 100%;
 }
 header nav ul{
   width: 100%;
+  margin-top: 5.5%;
 }
 header nav ul li{
   margin-right: 3%;
-  color: white;
+  color: black;
   font-size: 100%;
   font-weight: bold;
+  z-index: 10;
 }
 div.navbar{
   margin-left: 57%;
@@ -26,18 +38,112 @@ header nav ul li{
     display: inline-block;
     text-decoration: none;
   }
-  img#mainLogo{
+img#mainLogo{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    mix-blend-mode: multiply;
+    height: 60%;
   }
-  div.divider{
-    height: 20px;
-  }
-  div.description{
-    color: lightslategray;
+div#phraseContainer{
+  top: 15%;
+}
+p#phrase{
+    position: relative;
     text-align: center;
-    font-size: 200%;
     font-family: 'Bebas Neue';
+    color: #1687a7;
+    font-size: 300%;
+    opacity: 1;
+    animation: slideUp 1s ease-out;
+}
+hr{
+    opacity: 0;
+}
+h2::after,h2::before{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 4px;
+  background-color: black;
+  top: 28%;
+}
+h2::before{
+  left: 6%;
+}
+h2::after{
+  right: 50%;
   }
+h2.titles{
+  text-align: center;
+  font-size: 350%;
+  color: #1687a7;
+  margin-bottom: 5%;
+  margin-left: -45%;
+}
+div#courses{
+  margin-left: 20%;
+}
+section[data-scroll="in"]{
+  animation: fadeIn ease 3s;
+}
+section.courses{
+  background-color: #d3e0ea;
+}
+div#courseImages{
+  margin-bottom: 5%;
+  margin-left: -10%;
+}
+img.courseImages{
+  height: 90%;
+  width: 60%;
+  border-radius: 3%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.courseDescription{
+  position: relative;
+  top: 2%;
+  left: 20%;
+  width: 60%;
+}
+p.hiddenText{
+  display: none;
+}
+.courseImages:hover + p.hiddenText {
+  display: block;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes slideUp {
+  0%   { 
+  transform: translateY(200%); 		
+  }
+  100% { 
+  transform: translateY(0%); 
+  }
+ }
