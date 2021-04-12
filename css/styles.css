@@ -18,8 +18,8 @@ header nav{
 }
 img#logoHome{
   width: 10%;
-  margin-top: 3%;
-  margin-left: 10%;
+  margin-top: 5%;
+  margin-left: 15%;
   border-radius: 100%;
 }
 header nav ul{
@@ -64,64 +64,117 @@ p#phrase{
 hr{
     opacity: 0;
 }
-h2::after,h2::before{
-  content: '';
-  position: absolute;
-  width: 120px;
-  height: 4px;
-  background-color: #1687a7;
-  top: 28%;
-}
-h2::before{
-  left: 3%;
-}
-h2::after{
-  right: 47%;
-  }
 h2.titles{
   text-align: center;
-  font-size: 350%;
-  color: #1687a7;
-  margin-bottom: 5%;
-  margin-left: -45%;
+  font-size: 250%;
+  color: gray;
+  margin-top: 5%;
+  margin-bottom: 15%;
+  margin-left: 0%;
+  transform: scaleX(0)
 }
 h2.titles[data-scroll="in"]{
   animation: fadeIn ease 5s;
-}
-div#courses{
-  margin-left: 20%;
+  transform: scaleX(1)
 }
 section.courses{
   background-color: #d3e0ea;
+  background-image: url(../img/clouds.jpg);
+  background-position: center;
+  background-size: 100%;
+  height: 800px;
 }
 div#courseImages{
   margin-bottom: 5%;
-  margin-left: -10%;
   height: 200px;
+  z-index: 10;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: scaleY(0)
+}
+div#courseImages[data-scroll="in"]{
+  display: block;
+  animation: fadeIn ease 5s;
+  transform: scaleY(1)
+}
+div.courseContainer{
+  background-color: white;
+  opacity: 80%;
+  width: 80%;
+  height: 130%;
+  margin-left: 10%;
+  margin-top: -50%;
+  z-index: -1000;
+  position: relative;
 }
 img.courseImages{
-  height: 90%;
-  width: 60%;
-  border-radius: 3%;
+  height: 110%;
+  width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  z-index: 10;
 }
-img.courseImages[data-scroll="in"]{
-  animation: fadeIn ease 5s;
+#courseImages:hover .courseContainer{
+  height: 180%;
+  margin-top: -82%;
 }
-p.hiddenText{
+p.info{
   display: none;
+}
+button.seeMore{
+  display: none;
+}
+#courseImages:hover .info{
   position: absolute;
   text-align: center;
   margin-left: 12%;
   width: 70%;
+  font-family: 'Lato', sans-serif;
+  display: block;
+  margin-top: 4%;
+  font-size: 130%;
+  color: gray
 }
-.courseImages:hover + p.hiddenText {
+#courseImages:hover .seeMore{
+  display: block;
+  transition: 0.6s;
+  margin-left: 35%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  border-radius: 50px 50px;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  width: 30%;
+}
+.courseContainer:hover + p.hiddenInfo {
   display: block;
   animation: fadeIn ease 2s;
 }
+section.experiences{
+  background-color: whitesmoke;
+  height: 800px;
+}
+div.experienceQuote{
+  height: 70%;
+}
+.width-auto {
+  width: auto;
+}
 
+.text-lg {
+  font-size: 2rem;
+}
+
+.carousel-indicators li {
+  border: none;
+  background: #ccc;
+}
+
+.carousel-indicators li.active {
+  background: #28a745;
+}
 
 @keyframes fadeIn {
     0% {opacity:0;}
@@ -154,4 +207,4 @@ p.hiddenText{
   100% { 
   transform: translateY(0%); 
   }
- }
+}
