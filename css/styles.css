@@ -14,7 +14,7 @@ header{
 }
 header nav{
   background-color: #1687a7;
-  height: 115px;
+  height: 100px;
 }
 img#logoHome{
   width: 10%;
@@ -103,7 +103,7 @@ div.courseContainer{
   width: 80%;
   height: 130%;
   margin-left: 10%;
-  margin-top: -40%;
+  margin-top: -50%;
   z-index: -1000;
   position: relative;
 }
@@ -116,8 +116,8 @@ img.courseImages{
   z-index: 10;
 }
 #courseImages:hover .courseContainer{
-  height: 190%;
-  margin-top: -70%;
+  height: 180%;
+  margin-top: -82%;
 }
 p.info{
   display: none;
@@ -134,8 +134,7 @@ button.seeMore{
   display: block;
   margin-top: 4%;
   font-size: 130%;
-  color: gray;
-  animation: fadeIn ease 1s;
+  color: gray
 }
 #courseImages:hover .seeMore{
   display: block;
@@ -148,7 +147,6 @@ button.seeMore{
   color: white;
   text-align: center;
   width: 30%;
-  animation: fadeIn ease 1s;
 }
 .courseContainer:hover + p.hiddenInfo {
   display: block;
@@ -164,12 +162,7 @@ div.experienceQuote{
 .width-auto {
   width: auto;
 }
-section.pb-5{
-  height: 70%;
-}
-div.pb-4{
-  height: 200px;
-}
+
 .text-lg {
   font-size: 2rem;
 }
@@ -183,14 +176,6 @@ div.pb-4{
   background: #28a745;
 }
 
-section.first{
-  background-color: #d3e0ea;
-  height: 800px;
-  padding-top: 1px;
-}
-a#bautism{
-  color: blue;
-}
 @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
